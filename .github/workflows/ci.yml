@@ -17,16 +17,31 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
+      - run: corepack enable
+      - run: |
+          yarn config set nodeLinker node-modules
+          yarn config set cache-folder .yarn/cache
+          yarn config set defaultSemverRangePrefix ""
+          yarn config set enableGlobalCache false
+          yarn config set enableMirror true
+          yarn config set enableTelemetry false
       # Connect your workspace on nx.app and uncomment this to enable task distribution.
       # The "--stop-agents-after" is optional, but allows idle agents to shut down once the "build" targets have been requested
       # - run: yarn nx-cloud start-ci-run --distribute-on="5 linux-medium-js" --stop-agents-after="build"
 
       # Cache node_modules
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'yarn'
+      - uses: actions/cache@v2
+        with:
+          path: .yarn/cache
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      
+
       - run: yarn install --immutable
       - uses: nrwl/nx-set-shas@v4
 

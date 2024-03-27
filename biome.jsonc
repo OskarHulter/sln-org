@@ -1,17 +1,8 @@
 {
   "$schema": "https://biomejs.dev/schemas/1.6.3/schema.json",
   "files": {
-    "include": [
-      "src/**",
-      ".github/**"
-    ],
-    "ignore": [
-      "node_modules",
-      ".cache",
-      ".astro",
-      "dist",
-      ".yarn"
-    ],
+    "include": ["src/**", ".github/**"],
+    "ignore": ["node_modules", ".cache", ".astro", "dist", ".yarn"],
     "maxSize": 9128312873
   },
   "linter": {
@@ -40,13 +31,7 @@
     "formatWithErrors": true,
     "lineWidth": 120,
     "indentStyle": "space",
-    "ignore": [
-      "node_modules",
-      ".cache",
-      ".astro",
-      "dist",
-      ".yarn"
-    ]
+    "ignore": ["node_modules", ".cache", ".astro", "dist", ".yarn"]
   },
   "javascript": {
     "parser": {

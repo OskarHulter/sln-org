@@ -1,0 +1,76 @@
+{
+  "name": "docs",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/docs",
+  "projectType": "application",
+  "tags": [
+    "web",
+    "documentation"
+  ],
+  "targets": {
+    "dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "watch": true,
+        "parallel": false,
+        "outputPath": "dist/apps/docs",
+        "config": "apps/docs/astro.config.mjs",
+        "tsConfig": "apps/docs/tsconfig.json",
+        "command": "astro dev"
+      },
+      "cache": false
+    },
+    "start": {
+      "executor": "nx:run-commands",
+      "options": {
+        "watch": true,
+        "parallel": false,
+"config": "apps/docs/astro.config.mjs",
+"tsConfig": "apps/docs/tsconfig.json",
+        "command": "astro dev"
+      },
+      "cache": false
+    },
+    "check": {
+      "executor": "nx:run-commands",
+      "options": {
+        "config": "apps/docs/astro.config.mjs",
+        "tsConfig": "apps/docs/tsconfig.json",
+      "command": "astro check"
+      }
+    },
+    "preview": {
+      "executor": "nx:run-commands",
+      "defaultConfiguration": "production",
+      "dependsOn": [
+        "build",
+        "check"
+      ],
+      "options": {
+        "parallel": false,
+        "buildTarget": "docs:build",
+        "command": "astro preview"
+      },
+      "cache": false
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "defaultConfiguration": "production",
+      "dependsOn": [
+        "^build",
+        "check"
+      ],
+      "options": {
+        "outputPath": "dist/apps/docs",
+        "config": "apps/docs/astro.config.mjs",
+        "tsConfig": "apps/docs/tsconfig.json",
+
+        "command": "astro check && astro build"
+,
+"assets": [
+  "apps/docs/src/assets"
+]
+      }
+    }
+  }
+}

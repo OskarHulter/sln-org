@@ -21,16 +21,62 @@
       "inputs": ["production", "^production"]
     },
     "typecheck": {
-      "cache": true
+      "executor": "@nx/js:tsc",
+      "options": {
+        "command": "tsc",
+        "config": "{rootDir}/tsconfig.base.json"
+      },
+      "dependsOn": [
+        "^build"
+      ],
+      "cache": false
     },
     "lint": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "yarn dlx @biomejs/biome check --apply {projectRoot}",
+        "config": "{rootDir}/biome.jsonc",
+        "parallel": false
+      },
       "cache": true
     },
-    "lint:ci": {
+    "lint-ci": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "yarn dlx @biomejs/biome check {projectRoot}",
+        "config": "{rootDir}/biome.jsonc"
+      },
       "cache": true
     },
     "build-custom-server": {
       "cache": true
+    },
+    "astro": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "astro",
+        "config": "{projectRoot}/astro.config.mjs",
+        "parallel": false
+      }
+    },
+    "ls-project-root": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "ls {projectRoot}"
+      }
+    },
+    "preinstall": {
+      "cache": true,
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "yarn dlx only-allow yarn",
+        "parallel": false
+      }
+    },
+    "@nx/js:swc": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
     }
   },
   "plugins": [
@@ -60,9 +106,19 @@
       "options": {
         "targetName": "e2e"
       }
+    },
+    {
+      "plugin": "@nx/vite/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "previewTargetName": "preview",
+        "testTargetName": "test",
+        "serveTargetName": "serve",
+        "serveStaticTargetName": "serve-static"
+      }
     }
   ],
-  "nxCloudAccessToken": "ZDE1YmM3ODMtNzhiMC00NTJlLWExNDUtYjNkYjEwMDRjZTNmfHJlYWQtd3JpdGU=",
+  "nxCloudAccessToken": "$NX_CLOUD_ACCESS_TOKEN",
   "defaultBase": "main",
   "generators": {
     "@nx/next": {
@@ -70,6 +126,12 @@
         "style": "scss",
         "linter": "eslint"
       }
+    },
+    "@nx/web:application": {
+      "style": "scss",
+      "linter": "none",
+      "unitTestRunner": "none",
+      "e2eTestRunner": "playwright"
     }
   }
 }

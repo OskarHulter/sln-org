@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": [
+    "../../tsconfig.base.json",
+    "astro/tsconfigs/strict"
+  ],
+  "include": [
+    "src"
+  ],
+  "compilerOptions": {
+    "moduleResolution": "Bundler"
+  },
+  "plugins": [
+    {
+      "name": "vite"
+    }
+  ]
+}
