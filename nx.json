@@ -28,6 +28,9 @@
     },
     "lint:ci": {
       "cache": true
+    },
+    "build-custom-server": {
+      "cache": true
     }
   },
   "plugins": [
@@ -60,5 +63,13 @@
     }
   ],
   "nxCloudAccessToken": "ZDE1YmM3ODMtNzhiMC00NTJlLWExNDUtYjNkYjEwMDRjZTNmfHJlYWQtd3JpdGU=",
-  "defaultBase": "main"
+  "defaultBase": "main",
+  "generators": {
+    "@nx/next": {
+      "application": {
+        "style": "scss",
+        "linter": "eslint"
+      }
+    }
+  }
 }

@@ -1,0 +1,42 @@
+{
+  "name": "sln-next-web",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/sln-next-web",
+  "projectType": "application",
+  "tags": ["web"],
+  "targets": {
+    "build": {
+      "dependsOn": ["^build", "build-custom-server"]
+    },
+    "build-custom-server": {
+      "executor": "@nx/js:swc",
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/sln-next-web",
+        "main": "apps/sln-next-web/server/main.ts",
+        "tsConfig": "apps/sln-next-web/tsconfig.server.json",
+        "clean": false,
+        "assets": []
+      },
+      "configurations": {
+        "development": {},
+        "production": {}
+      }
+    },
+    "serve-custom-server": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "production",
+      "options": {
+        "buildTarget": "sln-next-web:build-custom-server"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "sln-next-web:build-custom-server:development"
+        },
+        "production": {
+          "buildTarget": "sln-next-web:build-custom-server:production"
+        }
+      }
+    }
+  }
+}
