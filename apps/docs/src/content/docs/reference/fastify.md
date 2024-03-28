@@ -31,6 +31,9 @@ https://github.com/fastify/aws-lambda-fastify
 - Read [about reference](https://github.com/ShogunPanda/fastify-http-errors-enhanced)
 - Read [about reference](https://github.com/metcoder95/fastify-ip)
 - Read [about reference](https://github.com/mateonunez/fastify-orama)
+
+temp email generation https://github.com/BalliAsghar/Mailsy (raycast integration)
+
 https://github.com/autotelic/fastify-opentelemetry
 https://github.com/kibertoad/fastify-s3-buckets 
 https://github.com/thomasthiebaud/fastify-schema-to-typescript
@@ -105,5 +108,28 @@ https://github.com/projectdiscovery/openrisk
 https://github.com/projectdiscovery/asyncsqs
 netcat - nc
 nmap - portscanner nikto, burp metas
-
+https://github.com/sqlmapproject/sqlmap
 https://github.com/edoardottt/awesome-hacker-search-engines 
+https://http-evader.semantic-gap.de/
+https://github.com/sqlmapproject/sqlmap
+https://www.wappalyzer.com/
+https://nmap.org/zenmap/
+https://awakari.com/ !
+https://www.filescan.io/reports
+https://usersearch.org/
+https://github.com/openwall/john
+https://github.com/Unity-Technologies/UnityDataTools
+https://github.com/pankod/next-boilerplate
+https://github.com/robertknight/webpack-bundle-size-analyzer
+https://www.apivoid.com/browse/
+https://pulsedive.com/explore/?q=risk%3Dhigh%2B
+https://www.reversephonelookup.com/
+https://sync.me/
+https://freecarrierlookup.com/
+https://www.phonevalidator.com/
+https://www.whitepages.com/
+https://spydialer.com/
+https://nmap.org/nping/
+https://snusbase.com/
+https://www.numlookup.com/
+https://bugmenot.com/
