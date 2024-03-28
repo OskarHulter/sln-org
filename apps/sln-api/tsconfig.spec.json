@@ -13,5 +13,7 @@
     "src/**/*.test.ts",
     "src/**/*.spec.ts",
     "src/**/*.d.ts"
-  ]
+,
+"src/app/types/index.test-d.ts"
+]
 }
