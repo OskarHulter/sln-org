@@ -1,8 +1,9 @@
-import * as path from 'path'
+/* eslint-disable @typescript-eslint/ban-types */
+import * as path from 'node:path'
 import AutoLoad from '@fastify/autoload'
 import type { FastifyInstance } from 'fastify'
 
-/* eslint-disable-next-line */
+// biome-ignore lint/complexity/noBannedTypes: <explanation>
 export type AppOptions = {}
 
 export async function app(fastify: FastifyInstance, opts: AppOptions) {

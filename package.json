@@ -20,6 +20,7 @@
     "clean": "yarn clean-cache && yarn clean-deps",
     "clean-cache": "yarn cache clean && rm -rf .nx/cache",
     "clean-deps": "rm -rf ./node_modules",
+    "clean-dist": "rm -rf ./dist",
     "_typecheck": "tsc -p tsconfig.base.json --noEmit --skipLibCheck --pretty --excludeDirectories node_modules || exit 0"
   },
   "devDependencies": {

@@ -25,8 +25,8 @@
       "options": {
         "watch": true,
         "parallel": false,
-"config": "apps/docs/astro.config.mjs",
-"tsConfig": "apps/docs/tsconfig.json",
+        "config": "apps/docs/astro.config.mjs",
+        "tsConfig": "apps/docs/tsconfig.json",
         "command": "astro dev"
       },
       "cache": false
@@ -36,7 +36,7 @@
       "options": {
         "config": "apps/docs/astro.config.mjs",
         "tsConfig": "apps/docs/tsconfig.json",
-      "command": "astro check"
+        "command": "astro check"
       }
     },
     "preview": {
@@ -64,12 +64,10 @@
         "outputPath": "dist/apps/docs",
         "config": "apps/docs/astro.config.mjs",
         "tsConfig": "apps/docs/tsconfig.json",
-
-        "command": "astro check && astro build"
-,
-"assets": [
-  "apps/docs/src/assets"
-]
+        "command": "astro check && astro build",
+        "assets": [
+          "apps/docs/src/assets"
+        ]
       }
     }
   }

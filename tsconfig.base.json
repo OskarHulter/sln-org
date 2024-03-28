@@ -1,17 +1,17 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-"extends": "@tsconfig/node20/tsconfig.json",
+  "extends": "@tsconfig/node20/tsconfig.json",
   "compileOnSave": false,
   "compilerOptions": {
-"strict": true,
-"resolveJsonModule": true,
-"isolatedModules": true,
-"esModuleInterop": true,
-"noEmit": true,
-"noUnusedLocals": true,
-"noUnusedParameters": true,
-"noImplicitReturns": true,
-"jsx": "preserve",
+    "strict": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "jsx": "preserve",
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
@@ -27,38 +27,37 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-"allowUmdGlobalAccess": true,
-"verbatimModuleSyntax": true,
-"stripInternal": true,
-"paths": {
-  "@docs/*": [
-    "apps/docs/src/*"
-  ],
-  "@sln-api/*": [
-    "apps/sln-api/src/*"
-  ],
-  "@sln-next-web/*": [
-    "apps/sln-next-web/src/*"
-  ],
-  "@sln-next-web/server/*": [
-    "apps/sln-next-web/server/*"
-  ],
-},
-"types": [
-  "vite/client"
-]
+    "allowUmdGlobalAccess": true,
+    "stripInternal": true,
+    "paths": {
+      "@docs/*": [
+        "apps/docs/src/*"
+      ],
+      "@sln-api/*": [
+        "apps/sln-api/src/*"
+      ],
+      "@sln-next-web/*": [
+        "apps/sln-next-web/src/*"
+      ],
+      "@sln-next-web/server/*": [
+        "apps/sln-next-web/server/*"
+      ],
+    },
+    "types": [
+      "vite/client"
+    ]
   },
-"ignore": [
-  "node_modules",
-  ".cache",
-  "dist",
-  ".yarn"
-],
+  "ignore": [
+    "node_modules",
+    ".cache",
+    "dist",
+    ".yarn"
+  ],
   "exclude": [
     "node_modules",
-".cache",
-"dist",
-".yarn",
+    ".cache",
+    "dist",
+    ".yarn",
     "tmp"
   ]
 }

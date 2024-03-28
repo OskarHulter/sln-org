@@ -1,4 +1,6 @@
+import { beforeEach, describe, it } from 'node:test'
 import Fastify, { type FastifyInstance } from 'fastify'
+import { expect } from 'vitest'
 import { app } from './app'
 
 describe('GET /', () => {

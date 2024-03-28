@@ -7,7 +7,7 @@
  */
 import { createServer } from 'http';
 import { parse } from 'node:url';
-import * as path from 'path';
+import * as path from 'node:path'
 import next from 'next';
 
 // Next.js server options:

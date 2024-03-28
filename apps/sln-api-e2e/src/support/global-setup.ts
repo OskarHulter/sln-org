@@ -1,4 +1,5 @@
 /* eslint-disable */
+// biome-ignore lint/style/noVar: <explanation>
 var __TEARDOWN_MESSAGE__: string
 
 module.exports = async () => {

@@ -35,7 +35,6 @@
       "executor": "nx:run-commands",
       "options": {
         "command": "yarn dlx @biomejs/biome check --apply {projectRoot}",
-        "config": "{rootDir}/biome.jsonc",
         "parallel": false
       },
       "cache": true
@@ -43,8 +42,7 @@
     "lint-ci": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "yarn dlx @biomejs/biome check {projectRoot}",
-        "config": "{rootDir}/biome.jsonc"
+        "command": "yarn dlx @biomejs/biome check {projectRoot}"
       },
       "cache": true
     },

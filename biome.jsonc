@@ -16,6 +16,9 @@
         "noCommentText": "warn",
         "noAssignInExpressions": "warn"
       },
+      "a11y": {
+        "noSvgWithoutTitle": "off"
+      },
       "style": {
         "useBlockStatements": "off",
         "useShorthandArrayType": "warn",
