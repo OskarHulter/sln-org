@@ -139,6 +139,7 @@ https://github.com/hedhyw/json-log-viewer
 https://github.com/bensadeh/tailspin 
 
 ```sh
+jlv tsconfig.json
 # Read from file and view in `less`
 tspin application.log
 
