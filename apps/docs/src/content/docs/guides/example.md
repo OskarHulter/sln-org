@@ -1,10 +1,15 @@
 ---
-title: Example Guide
-description: A guide in my new Starlight docs site.
+title: Browser Events
+description: A guide to useful browser events.
 ---
 
-Guides lead a user through a specific task they want to accomplish, often with a sequence of steps.
-Writing a good guide requires thinking about what your users are trying to do.
+Using keyboard events for dynamic search? yt
+
+```ts
+document.addEventListener('keydown', function(e){
+  document.getElementById('result').innerHTML = e.key;
+})
+```
 
 ## Further reading
 
